@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from idsapi.views import analyze_logs
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("",analyze_logs, name='analyze_logs')
 ]
